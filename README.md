@@ -11,9 +11,11 @@ Material Design: Utilizes KivyMD for a clean, modern UI.
 
 ## Prerequisites
 Python 3.x
-Kivy
-KivyMD
+Kivy==2.1.0
+KivyMD==1.1.1
 SQLite3 (included with Python)
+sdl2_ttf==2.0.15
+pillow
 
 ## Setup
 1. Clone this repository:
