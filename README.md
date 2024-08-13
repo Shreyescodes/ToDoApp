@@ -77,8 +77,12 @@ task: Text (The task description)
 due_date: Text (The due date for the task)
 completed: Boolean (0 for incomplete, 1 for complete)
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contributing
-Feel free to submit issues or pull requests. Contributions are welcome!
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+## License
+This project is licensed under the MIT License. [MIT](https://choosealicense.com/licenses/mit/)
+
+
