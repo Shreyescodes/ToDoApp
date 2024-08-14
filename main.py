@@ -85,6 +85,14 @@ class MainApp(MDApp):
         )
         task.text = ''
 
+    def show_incomplete_tasks(self):
+        self.root.ids.incomplete_tasks_view.height = 400
+        self.root.ids.completed_tasks_view.height = 0
+
+    def show_completed_tasks(self):
+        self.root.ids.incomplete_tasks_view.height = 0
+        self.root.ids.completed_tasks_view.height = 400
+
     def on_start(self):
         try:
             completed_tasks, incomplete_tasks = db.get_tasks()
@@ -97,6 +105,10 @@ class MainApp(MDApp):
                 add_task = ListItemWithCheckbox(pk=task[0], text='[s]' + task[1] + '[/s]', secondary_text=task[2])
                 add_task.ids.check.active = True
                 self.root.ids['completed_container'].add_widget(add_task)
+
+            # Initially, only show the incomplete tasks
+            self.show_incomplete_tasks()
+
         except Exception as e:
             print(e)
             pass
